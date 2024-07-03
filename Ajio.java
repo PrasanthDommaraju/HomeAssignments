@@ -33,7 +33,8 @@ public class Ajio {
 		ajio.executeScript("arguments[0].click();", category);
 		
 		//printing the count of items found
-		WebElement itemsWE = ajio.findElement(By.xpath("//div[@class='length']"));
+		Thread.sleep(4000);
+		WebElement itemsWE = ajio.findElement(By.xpath("//div[@class='length']/strong"));
 		String noOfItems = itemsWE.getText();
 		System.out.println(noOfItems);
 		
